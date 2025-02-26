@@ -3,7 +3,7 @@
 <button (click)="onUpload()" [disabled]="selectedFiles.length === 0">Uploader</button>
 
 <div *ngIf="parsedContents.length > 0">
-    <h3>Contenu du Fiche de Match fichiers XML :</h3>
+    <h3>Contenu du Fiche Match XML :</h3>
     <div *ngFor="let content of parsedContents; let i = index">
       <pre>{{ content }} (Index: {{ i }})</pre>
     </div>
