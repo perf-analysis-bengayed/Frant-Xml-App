@@ -4,7 +4,7 @@
 
 <div *ngIf="parsedContents.length > 0">
     <h3>Contenu du Fiche Match XML :</h3>
-    <div *ngFor="let content of parsedContents; let i = index">
-      <pre>{{ content }} (Index: {{ i }})</pre>
+    <div *ngFor="let content of parsedContents; ">
+      <pre>{{ content }} </pre>
     </div>
   </div>

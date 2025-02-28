@@ -28,7 +28,7 @@ export class ConvertService {
   uploadFiles(files: File[], matchInfo: MatchInfo): Observable<any> {
     const formData = new FormData();
   
-    files.forEach(file => formData.append('files', file)); // Ajouter plusieurs fichiers
+    files.forEach(file => formData.append('files', file)); 
     formData.append('matchInfo', new Blob([JSON.stringify(matchInfo)], { type: 'application/json' }));
   
     return this.http.post<any>(this.apiUrl, formData);
