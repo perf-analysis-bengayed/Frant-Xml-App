@@ -1,10 +1,12 @@
-
-  <input type="file" (change)="onFileSelected($event)" multiple />
+<input type="file" (change)="onFileSelected($event)" multiple accept=".xml" />
 <button (click)="onUpload()" [disabled]="selectedFiles.length === 0">Uploader</button>
 
-<div *ngIf="parsedContents.length > 0">
-    <h3>Contenu du Fiche Match XML :</h3>
-    <div *ngFor="let content of parsedContents; ">
-      <pre>{{ content }} </pre>
-    </div>
-  </div>
+<div *ngIf="matchInfo.matchFileContent">
+  <h3>Match Information:</h3>
+  <pre>{{ matchInfo.matchFileContent }}</pre>
+</div>
+
+<div *ngIf="matchInfo.parsedContents.length > 0">
+  <h3>Additional Parsed Contents:</h3>
+  <pre>{{ matchInfo.parsedContents.join('\n') }}</pre>
+</div>
