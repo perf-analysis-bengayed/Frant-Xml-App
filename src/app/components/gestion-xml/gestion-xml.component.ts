@@ -3,12 +3,7 @@ import { ConvertService } from '../../services/convert.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface MatchInfo {
-  matchDate: Date | string;
-  homeTeam: string;
-  awayTeam: string;
-  parsedContents: string[];
-}
+
 @Component({
   selector: 'app-gestion-xml',
   templateUrl: './gestion-xml.component.html',
@@ -16,8 +11,9 @@ interface MatchInfo {
 })
 export class GestionXmlComponent {
   selectedFiles: File[] = [];
+
   matchInfo: any = {
-    parsedContents: [],
+    // parsedContents: [],
     matchDate: '',
     homeTeam: '',
     awayTeam: '',
